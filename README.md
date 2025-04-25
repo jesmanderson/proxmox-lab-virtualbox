@@ -1,3 +1,13 @@
+<p align="center">
+  I Built a Datacenter Inside My Laptop — Here’s the Lab 
+</p>
+<p align="center">
+  <img src="https://img.shields.io/badge/VirtualBox-7.x-blue" />
+  <img src="https://img.shields.io/badge/Proxmox-8.x-red" />
+  <img src="https://img.shields.io/badge/Ubuntu-22.04-orange" />
+  <img src="https://img.shields.io/badge/Linux-Kernel--Based-informational" />
+</p>
+
 # 🧱 Proxmox VE Lab (Nested Virtualization in VirtualBox)
 
 ## 🎯 Purpose
@@ -76,6 +86,22 @@ qm set 100 --kvm 0
 
 ---
 
+## ⚙️ VM Configuration
+
+This lab includes a sample Proxmox VM config file: [`vm-100.conf`](./config/vm-100.conf)
+
+This file defines how the Ubuntu guest VM is configured in Proxmox, including:
+
+- `cores` and `memory`: how much CPU/RAM is allocated
+- `net0`: virtual NIC using `virtio`, attached to `vmbr0`
+- `scsi0`: the disk image location and size (10G)
+- `ide2`: the ISO attached as a CD-ROM
+- `kvm: 0`: disables KVM because we’re using nested virtualization in VirtualBox
+
+> You can recreate or script VM builds using this file format with `qm` commands.
+
+---
+
 ## 🧰 Common Issues & Fixes
 
 ### ❌ `TASK ERROR: KVM virtualization configured, but not available`
@@ -118,3 +144,19 @@ proxmox-lab-virtualbox/
 This lab was built from scratch to gain hands-on experience with virtualization and infrastructure. It’s a great practice ground for cloud engineers, DevOps students, and IT pros transitioning into server and VM administration roles.
 
 Built with sweat, troubleshooting, and a whole lot of command-line magic 💻🔥
+
+---
+
+## 🚀 Next Steps (Phase 2 Ideas)
+
+Want to expand this lab? Here are some ideas to keep leveling up:
+
+- [ ] Create a second VM and test internal networking (ping, SSH)
+- [ ] Add static IPs to guest VMs and configure internal DNS
+- [ ] Create a Windows Server VM with RDP access
+- [ ] Turn Ubuntu VM into a web server (Apache/Nginx + firewall rules)
+- [ ] Backup the VM using Proxmox snapshot and restore features
+- [ ] Learn cloud-init to automate guest OS setup
+- [ ] Explore Ansible or Terraform to deploy future VMs via script
+
+> Everything I learn in this lab maps directly to cloud jobs (AWS, Azure, GCP) and DevOps/Infra roles.
