@@ -125,20 +125,6 @@ qm set <vm-id> --kvm 0
 
 ---
 
-## 📁 Suggested Repo Structure
-
-```
-proxmox-lab-virtualbox/
-├── README.md
-├── screenshots/
-├── notes/
-│   └── fix-kvm-error.md
-├── config/
-│   └── vm-100.conf
-```
-
----
-
 ## 🙌🏾 Credits & Reflection
 
 This lab was built from scratch to gain hands-on experience with virtualization and infrastructure. It’s a great practice ground for cloud engineers, DevOps students, and IT pros transitioning into server and VM administration roles.
@@ -159,4 +145,4 @@ Want to expand this lab? Here are some ideas to keep leveling up:
 - [ ] Learn cloud-init to automate guest OS setup
 - [ ] Explore Ansible or Terraform to deploy future VMs via script
 
-> Everything I learn in this lab maps directly to cloud jobs (AWS, Azure, GCP) and DevOps/Infra roles.
+> Everything I learn in this lab maps directly to cloud (AWS, Azure, GCP) and DevOps/Infra roles.
