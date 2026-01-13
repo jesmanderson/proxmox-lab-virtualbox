@@ -8,14 +8,14 @@
   <img src="https://img.shields.io/badge/Linux-Kernel--Based-informational" />
 </p>
 
-# 🧱 Proxmox VE Lab (Nested Virtualization in VirtualBox)
+# Proxmox VE Lab (Nested Virtualization in VirtualBox)
 
-## 🎯 Purpose
+## Purpose
 This project simulates a real-world virtualization environment using **Proxmox VE** installed inside **VirtualBox**. It is a foundational lab for learning DevOps, Infrastructure Engineering, Virtualization, and Cloud Concepts using a completely local setup.
 
 ---
 
-## 🛠️ Tools Used
+## Tools Used
 - **VirtualBox** – Virtualization platform for host machine
 - **Proxmox VE ISO** – Enterprise-grade hypervisor installed in the VM
 - **Ubuntu Server ISO** – Operating system for guest VM inside Proxmox
@@ -24,7 +24,7 @@ This project simulates a real-world virtualization environment using **Proxmox V
 
 ---
 
-## 🧱 Lab Architecture
+## Lab Architecture
 
 ```
 Your PC (Host)
@@ -37,7 +37,7 @@ This simulates how large companies manage multiple servers from a single control
 
 ---
 
-## ✅ What Was Built
+## What Was Built
 
 - Installed Proxmox VE inside a VirtualBox VM
 - Configured networking to access Proxmox Web UI from browser
@@ -47,7 +47,7 @@ This simulates how large companies manage multiple servers from a single control
 
 ---
 
-## 📡 Network Configuration
+## Network Configuration
 
 - **Adapter 1**: NAT (for outbound internet access)
 - **Adapter 2**: Host-Only (for internal communication with Proxmox from host)
@@ -65,7 +65,7 @@ https://192.168.56.X:8006
 
 ---
 
-## 💾 Upload ISO
+## Upload ISO
 
 1. Go to `Datacenter > proxmox > local > ISO Images`
 2. Click **Upload** and choose Ubuntu ISO file
@@ -73,7 +73,7 @@ https://192.168.56.X:8006
 
 ---
 
-## 🖥️ Create a New VM in Proxmox
+## Create a New VM in Proxmox
 
 1. Click **"Create VM"**
 2. Select ISO and name the VM
@@ -86,7 +86,7 @@ qm set 100 --kvm 0
 
 ---
 
-## ⚙️ VM Configuration
+## VM Configuration
 
 This lab includes a sample Proxmox VM config file: [`vm-100.conf`](./config/vm-100.conf)
 
@@ -102,7 +102,7 @@ This file defines how the Ubuntu guest VM is configured in Proxmox, including:
 
 ---
 
-## 🧰 Common Issues & Fixes
+##  Common Issues & Fixes
 
 ### ❌ `TASK ERROR: KVM virtualization configured, but not available`
 > Fix:
@@ -118,22 +118,22 @@ qm set <vm-id> --kvm 0
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 - `screenshots/proxmox-install.png`
 - `screenshots/network-setup.png`
 - `screenshots/ubuntu-vm-booted.png`
 
 ---
 
-## 🙌🏾 Credits & Reflection
+## Credits & Reflection
 
 This lab was built from scratch to gain hands-on experience with virtualization and infrastructure. It’s a great practice ground for cloud engineers, DevOps students, and IT pros transitioning into server and VM administration roles.
 
-Built with sweat, troubleshooting, and a whole lot of command-line magic 💻🔥
+Built with sweat, troubleshooting, and a whole lot of command-line magic 
 
 ---
 
-## 🚀 Next Steps (Phase 2 Ideas)
+## Next Steps (Phase 2 Ideas)
 
 Want to expand this lab? Here are some ideas to keep leveling up:
 
